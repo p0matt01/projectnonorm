@@ -1,7 +1,10 @@
 body{
 	text-align: center;
 	padding: 10px;
-	background-color: 
+	border: 15px groove #00FFFF;
+	margin: auto;
+	width: 30%;
+	display: block;
 }
 
 form {
@@ -14,12 +17,11 @@ form {
 }
 
 button {
-	background-color: rgb(213, 50, 0);
-	text-decoration: bold;
+	background-color: #555555;
+	color: white;
 	text-align: center;
-	padding: 10px;
-	width: 80px;
-	height: 15px;
+	border-radius: 50%;
+	font-size: 20px;
 }
 
 .text{
