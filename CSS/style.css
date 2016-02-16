@@ -1,10 +1,14 @@
-body{
+#submit{
 	text-align: center;
 	padding: 10px;
-	border: 15px groove #00FFFF;
-	margin: auto;
-	width: 30%;
-	display: block;
+	border: 15px ridge #00FFFF;
+	margin: 40px auto;
+	width: 100%;	
+}
+
+
+body {
+	background-color: #f4f7f8;
 }
 
 form {
@@ -20,8 +24,8 @@ button {
 	background-color: #555555;
 	color: white;
 	text-align: center;
-	border-radius: 50%;
-	font-size: 20px;
+	border-radius: 15%;
+	font-size: 30px;
 }
 
 .text{
@@ -35,4 +39,16 @@ fieldset {
 
 textarea {
 	height: 100px;
+}
+
+#nav {
+	margin-top: 20px;
+	list-style: none;
+	float: right;
+	margin-right: 40%;
+}
+
+#nav li {
+	float: left;
+	margin-left: 20px;
 }

@@ -7,36 +7,46 @@
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <header>
+        <div id="wrapper">
+            <ul id="nav">
+                <li><a href="#">Trick Log</a></li>
+                <li><a href="#">Trick Database</a></li>
+            </ul>
+        </div>
+    </header>
     <body>
 
       <form action="index.html" method="post">
-
+        
+        <div id="submit">
         <h1>Skate Trick Log</h1>
 
-        <fieldset>
+            <fieldset>
 
-            <legend>Personal Info</legend>
+                <legend>Personal Info</legend>
 
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" class="text" name="user_name" ><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" class="text" name="user_name" ><br>
 
-            <label for="mail">Email:</label><br>
-            <input type="email" id="mail" class="text" name="user_email">
-
-
-        </fieldset>
-
-        <fieldset>
+                <label for="mail">Email:</label><br>
+                <input type="email" id="mail" class="text" name="user_email">
 
 
-            <label for="trick">Trick Name:</label><br>
-            <textarea id="trick" class="text" name="trick"></textarea>
+            </fieldset>
 
-        </fieldset>
+            <fieldset>
+
+
+                <label for="trick">Trick Name:</label><br>
+                <textarea id="trick" class="text" name="trick"></textarea>
+
+            </fieldset>
 
         <button type="submit">Log Trick</button>
 
       </form>
-      
+
+    </div>
     </body>
 </html>
