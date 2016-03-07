@@ -15,7 +15,7 @@
             </ul>
         </div>
     </header>
-    <body>
+    <body ng-app>
 
       <form action="index.html" method="post">
         
@@ -35,6 +35,29 @@
 
             </fieldset>
 
+            <div>
+                <label>Type of Trick</label><br>
+                <label><input type="radio" name="type" value="flip trick">Flip Trick</label>
+                <label><input type="radio" name="type" value="grind">Grind</label>
+                <label><input type="radio" name="type" value="manual">Manual</label>
+                <label><input type="radio" name="type" value="combo">Combo</label>
+                <br>
+            </div>
+            <div>
+                <label>Obstacle</label><br>
+                <label><input type="radio" name="obstacle" value="flat">Flat</label>
+                <label><input type="radio" name="obstacle" value="gap">Gap</label>
+                <label><input type="radio" name="obstacle" value="box/ledge">Box/Ledge</label><br>
+                <label><input type="radio" name="obstacle" value="hubba/handrail">Hubba/Handrail</label>
+                <label><input type="radio" name="obstacle" value="tranny">Tranny</label>
+
+            </div>
+
+            <div>
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" class="text">
+            </div>
+
             <fieldset>
 
 
@@ -48,5 +71,7 @@
       </form>
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     </body>
 </html>

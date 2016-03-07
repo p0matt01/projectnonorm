@@ -37,6 +37,10 @@ fieldset {
 	border: none;
 }
 
+div {
+	margin: 30px;
+}
+
 textarea {
 	height: 100px;
 }
