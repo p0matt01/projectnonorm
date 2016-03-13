@@ -56,3 +56,35 @@ textarea {
 	float: left;
 	margin-left: 20px;
 }
+
+/* ===========================
+Angular Animations
+=============================*/
+
+.Log .ng-hide-add,
+.ng-hide-remove {
+  transition: all linear 1s;
+  display: block !important;
+}
+
+.Log .ng-hide-add.ng-hide-add-active,
+.ng-hide-remove {
+  opacity: 0;
+}
+
+.Log .ng-hide-add,
+.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+
+
+
+
+/* ===========================
+Media Queries
+=============================*/
+
+@media (min-width: 769px) {
+	
+}
