@@ -1,4 +1,49 @@
-#submit{
+
+.header-wrapper {
+	padding: 20px;
+	background: green;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.header-wrapper li {
+	border-radius: 50%;
+	background: #dddddd;
+	border: 2px solid #AADDFF;
+	margin-right: 10px;
+}
+
+.header-wrapper,
+.header-wrapper li {
+	display: inline-block;
+}
+
+.header-wrapper a {
+	color: #9933ff;
+	text-decoration: none;
+	display: block;
+
+	padding: 10px 20px;
+}
+
+.main-nav {
+}
+
+#signUp {
+	float: right;
+
+	margin-right: 15px;
+
+}
+
+.main-wrapper {
+	background: black;
+}
+
+.trickSubmit{
 	text-align: center;
 	padding: 10px;
 	border: 15px ridge #00FFFF;
@@ -9,6 +54,7 @@
 
 body {
 	background-color: #f4f7f8;
+	font-family: Georgia, serif;
 }
 
 form {
@@ -20,6 +66,15 @@ form {
 	border: none;
 }
 
+.userInfo{
+	border: 3px solid black;
+}
+
+
+textarea {
+	height: 100px;
+}
+
 button {
 	background-color: #555555;
 	color: white;
@@ -28,33 +83,8 @@ button {
 	font-size: 30px;
 }
 
-.text{
-	border: 3px solid black;
-}
-
-fieldset {
-	margin-bottom: 30px;
-	border: none;
-}
-
-div {
-	margin: 30px;
-}
-
-textarea {
-	height: 100px;
-}
-
-#nav {
-	margin-top: 20px;
-	list-style: none;
-	float: right;
-	margin-right: 40%;
-}
-
-#nav li {
-	float: left;
-	margin-left: 20px;
+* {
+	box-sizing: border-box;
 }
 
 /* ===========================
@@ -85,6 +115,11 @@ Angular Animations
 Media Queries
 =============================*/
 
-@media (min-width: 769px) {
-	
+@media (max-width: 768px) {
+	.main-nav,
+	.main-nav li {
+		
+		
+
+	}
 }

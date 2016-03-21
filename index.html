@@ -3,82 +3,80 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up Form</title>
+        <title>Skate Log</title>
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src=Javascript/ajaxExample.js type="text/javascript"></script>
+        <script src= JavaScript/Angular.js type="text/javascript"></script>
     </head>
-    <header>
-        <div id="wrapper">
-            <ul id="nav">
-                <li><a href="#">Trick Log</a></li>
-                <li><a href="#">Trick Database</a></li>
-            </ul>
-        </div>
-    </header>
-    <body ng-app="skateApp">
 
-      <form action="index.html" method="post">
-        
-        <div id="submit">
-        <h1>Skate Trick Log</h1>
-            <h2 ng-controller="DateController">{{ now | date }}</h2>
-            <fieldset class="required">
+    <body>
+    <div class="main-wrapper" ng-app="skateApp">
+        <header>
+            <div class="header-wrapper">
+                <ul class="main-nav">
+                    <li><a href="#">Trick Log</a></li>
+                    <li><a href="#">Trick Database</a></li>
+                </ul>
+                <button id="signUp">
+                    Log In/ Sign Up
+                </button>
+            </div>
+        </header>
 
+        <form >
+            
+        <div class="trickSubmit" ng-controller="mainCtrl">
+            <h1>
+                Skate Trick Log
+            </h1>              
                 <legend>Personal Info</legend>
 
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" class="text" name="user_name" ><br>
+                    <label for="skaterName">
+                        Skater Name:
+                    </label><br>
+                    <input type="text" id="skaterName" class="userInfo" name="skater_name" ng-model="skaterName" required><br>
+                  
+                <div class="trickType">
+                    <label>Type of Trick</label><br>
+                    <label><input type="radio" name="type" ng-model="typeOfTrick" value="flip trick" required>Flip Trick</label>
+                    <label><input type="radio" name="type" ng-model="typeOfTrick" value="grind">Grind</label>
+                    <label><input type="radio" name="type" ng-model="typeOfTrick" value="manual">Manual</label>
+                    <label><input type="radio" name="type" ng-model="typeOfTrick" value="combo">Combo</label>
+                    <br>
+                </div>
 
-                <label for="mail">Email:</label><br>
-                <input type="email" id="mail" class="text" name="user_email">
+                <div class="obstacleType required">
+                    <label>Obstacle</label><br>
+                    <label><input type="radio" name="obstacle" ng-model="trickObstacle" value="flat" required>Flat</label>
+                    <label><input type="radio" name="obstacle" ng-model="trickObstacle" value="gap">Gap</label>
+                    <label><input type="radio" name="obstacle" ng-model="trickObstacle" value="box/ledge">Box/Ledge</label><br>
+                    <label><input type="radio" name="obstacle" ng-model="trickObstacle" value="hubba/handrail">Hubba/Handrail</label>
+                    <label><input type="radio" name="obstacle" ng-model="trickObstacle" value="tranny">Tranny</label>
 
+                </div>
 
-            </fieldset>
+                <div class="required">
+                    <label for="location">Location:</label><br>
+                    <input type="text" id="location" class="text" ng-model="trickLocation" required>
+                </div>
 
-            <div class="required">
-                <label>Type of Trick</label><br>
-                <label><input type="radio" name="type" value="flip trick">Flip Trick</label>
-                <label><input type="radio" name="type" value="grind">Grind</label>
-                <label><input type="radio" name="type" value="manual">Manual</label>
-                <label><input type="radio" name="type" value="combo">Combo</label>
-                <br>
-            </div>
-            <div class="required">
-                <label>Obstacle</label><br>
-                <label><input type="radio" name="obstacle" value="flat">Flat</label>
-                <label><input type="radio" name="obstacle" value="gap">Gap</label>
-                <label><input type="radio" name="obstacle" value="box/ledge">Box/Ledge</label><br>
-                <label><input type="radio" name="obstacle" value="hubba/handrail">Hubba/Handrail</label>
-                <label><input type="radio" name="obstacle" value="tranny">Tranny</label>
+                    <label for="trick">Trick Name:</label><br>
+                    <textarea id="trick" class="text" name="trick" ng-model="trickName" required></textarea>
+               
+                <div>
+                    <button class="Log" ng-click="trickClick()">
+                        Log Trick
+                    </button><br>
+                    <span>
+                      Tricks Logged: {{count}}
+                    </span>
+                </div>
 
-            </div>
-
-            <div class="required">
-                <label for="location">Location:</label><br>
-                <input type="text" id="location" class="text">
-            </div>
-
-            <fieldset class="required">
-
-
-                <label for="trick">Trick Name:</label><br>
-                <textarea id="trick" class="text" name="trick"></textarea>
-
-            </fieldset>
-
-        <button type="submit" ng-controller="TrickController" class="Log" ng-click="increment()">Log Trick</button>
-            <h2 ng-controller="TrickController">
-                Tricks Logged: {{tricks.points}}
-            </h2>
-      </form>
-
+              
+        </div>
+        </form>
     </div>
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
-    <script src= JavaScript/jquery-1.12.1.js type="text/javascript"></script>
-    <script src= JavaScript/Ajaxctions.js type="text/javascript"></script>
-    <script src= JavaScript/Angular.js type="text/javascript"></script>
     </body>
 </html>

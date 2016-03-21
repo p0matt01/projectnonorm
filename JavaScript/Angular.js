@@ -1,28 +1,32 @@
-angular.module("skateApp", ['ngAnimate'])
-angular.module('skateApp').config(['$controllerProvider', function($controllerProvider) {
-  $controllerProvider.allowGlobals();
-}]);
-
-angular.module('skateApp')
-  .value('tricks', {points: 0});
-
-
-angular.module('skateApp')
-  .controller('TrickController', function($scope, tricks) {
-    $scope.tricks = tricks;
-    $scope.increment = function() {
-      $scope.tricks.points++;
-    };
-  });
-
-
-
+var app = angular.module("skateApp", []);
 
 /* ===========================
-Date
+Treehouse Controller
 =============================*/
 
-angular.module('skateApp')
-  .controller('DateController', function($scope) {
-    $scope.now = Date.now();
-  });
+app.controller('mainCtrl', function($scope) {
+	$scope.skaterName = "Who Was Skating?";		
+	$scope.typeOfTrick = "";
+	$scope.trickObstacle = "";
+	$scope.trickLocation = "";
+	$scope.trickName = "";
+	$scope.count = 0;
+    $scope.trickClick = function() { 	
+    	console.log([$scope.skaterName,
+    				 $scope.typeOfTrick, $scope.trickObstacle,
+    				 $scope.trickLocation, $scope.trickName]);
+    	$scope.count += 1;
+    };
+});
+
+
+
+
+
+
+
+
+
+
+
+
