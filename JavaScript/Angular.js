@@ -1,7 +1,7 @@
 var app = angular.module("skateApp", []);
 
 /* ===========================
-Treehouse Controller
+Skate Trick Log Submission Controller
 =============================*/
 
 app.controller('mainCtrl', function($scope) {

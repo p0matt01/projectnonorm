@@ -33,13 +33,26 @@
 
 }
 
+.main-nav li:hover {
+	background-color: blue;
+}
+
 #signUp {
 	float: right;
 	display: inline-block;
 	margin-top: 15px;
 	margin-right: 15px;
 
+	color: black;
+	padding: 10px 20px;
+	background-color: yellow;
+	border: 0;
+}
 
+#signUp:hover {
+	text-decoration: none;
+	color: black;
+	background-color: red;
 }
 
 .main-wrapper {
@@ -109,5 +122,5 @@ Media Queries
 	.main-nav {
 	margin-left: 135px;
 
-}
+	}
 }
