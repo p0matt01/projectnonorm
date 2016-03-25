@@ -17,6 +17,8 @@ app.controller('mainCtrl', function($scope) {
     				 $scope.trickLocation, $scope.trickName]);
     	$scope.count += 1;
     };
+    $scope.userName = "";
+    $scope.userPassword = "";
 });
 
 

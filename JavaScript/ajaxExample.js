@@ -1,15 +1,12 @@
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function () {
-	if (xhr.readystate === 4) {
-		var users = JSON.parse(xhr.responseText);
-		console.log("users")
-		var addUser = function (newUser) {
-			users.newUser;
-		};
-	};
-};
-xhr.open('Get', 'Data/users.json');
-xhr.send();
-
- 
+$(document).ready(function () {
+	var url="Data/users.json";
+	$.getJSON(url, userInfoData, function (response) {
+		var obj = JSON.parse(url);
+		obj.push(userInfoData);
+		url = JSON.stringify(obj);
+	}).fail(function (jqXHR) {
+		var errorMessage = "Oops! Something went wrong.";
+		$('').html(errorMessage);
+	});
+});
